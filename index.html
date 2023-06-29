@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Simple Starter 2.0</title>
+	<meta name="description" content="Simple Starter 2.0 Description ">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/preview.jpg">
+
+	<link rel="stylesheet" href="./styles.css">
+
+	<script src="js/main.js" type="module" defer></script>
+
+</head>
+
+<body class="preload">
+
+	<div class="wrapper">
+    <header class="header">
+			<div class="header__site-container">
+				<a href="/" class="logo">
+					HDR-LOGO
+				</a>
+
+				<button data-path="modal" class="button">
+					show modal
+				</button>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="section">
+				<div class="section__site-container">
+					<h1 class="visually-hidden">
+						Section title
+					</h1>
+
+					<h1>
+						HTML/CSS template for VS-code
+					</h1>
+
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="section__site-container">
+					<form action="" class="form">
+						<input type="text" name="phone" id="" class="input" placeholder="Введите номер телефона">
+					</form>
+				</div>
+			</section>
+
+			<section class="section map">
+				<div class="map__box" id="yamapsId">
+					<!-- inject map -->
+				</div>
+			</section>
+
+			<section class="section lazyloading">
+				<div class="section__site-container">
+					
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__site-container">
+				footer
+			</div>
+		</footer>
+	</div>
+
+	<div class="modal">
+		<div class="modal__container" data-target="modal">
+			<div class="modal__content">
+				<button type="button" class="modal__close-btn modal-close">
+					<svg class="icon">
+						<use xlink:href="./images/sprite.svg#close"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

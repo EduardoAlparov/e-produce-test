@@ -1,0 +1,17 @@
+{
+  "name": "package-name",
+  "authors": [
+    "EduardoAlparov <workman133@yandex.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,37 @@
+.button {
+  display: block;
+  padding: 2rem 4rem;
+  color: var(--white);
+  background-color: var(--accent);
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 0.4rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.button__text {
+  display: inline-block;
+}
+@media only screen and (min-width: 769px) {
+  .button {
+    display: block;
+  }
+}
+@media (hover: none) {
+  .button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .button:active {
+    color: var(--title);
+    background-color: var(--white);
+    border-color: var(--title);
+  }
+}
+@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover: hover) {
+  .button:hover {
+    color: var(--title);
+    background-color: var(--white);
+    border-color: var(--title);
+  }
+}

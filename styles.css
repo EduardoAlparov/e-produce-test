@@ -1,0 +1,61 @@
+/* RESET, NORMALIZE STYLES: */
+@import url('./css/reset.css');
+/* @import url('./css/normalize.css'); */
+
+/* FONTS LOAD SECTION: */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+@import url('./css/fonts.css');
+
+/* LAYOUTS STYLES: */
+@import url('./css/layout/container.css'); /* chunk '__site-container' is reserved for main site container  */
+
+@import url('./css/layout/wrapper.css');
+@import url('./css/layout/header.css');
+@import url('./css/layout/main.css');
+@import url('./css/layout/section.css');
+@import url('./css/layout/footer.css');
+@import url('./css/layout/map.css');
+@import url('./css/layout/modal.css');
+
+/* UI STYLES: */
+@import url('./css/ui/commons.css');
+@import url('./css/ui/visually-hidden.css');
+
+/* BEM BLOCKS(compiled from /scss by https://github.com/ritwickdey/vscode-live-sass-compiler):*/
+@import url('./css/blocks/global.css');
+@import url('./css/blocks/button.css');
+
+/* VENDORS: */
+/* @import url('./lib/swiper/swiper.css'); */
+/* @import url('./lib/fancybox/fancybox.css'); */
+
+/* USER VARIABLES SECTION: */
+:root {
+	/* colors: */
+	--accent: orange;
+	--title: #111;
+	--text: #333;
+	--back: #eee;
+	--white: #fff;
+	--black: #000;
+
+	/* typography: */
+	--main-ff: 'Roboto', sans-serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+	--font-body: 400 1.6rem/1.25 var(--main-ff);
+
+	/* etc.: */
+	--transition: 0.3s ease;
+}
+
+body {
+	position: relative;
+
+	min-width: 319px;
+
+	color: var(--text);
+	font: var(--font-body);
+	text-rendering: optimizeSpeed;
+
+  scroll-behavior: smooth;
+}
