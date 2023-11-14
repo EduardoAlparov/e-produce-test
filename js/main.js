@@ -1,5 +1,5 @@
 import Modal from "./modules/Modal.js";
-// import Map from "./modules/Map.js";
+import headerHideOnScroll from "./modules/headerHideOnScroll.js";
 // import validationForm from './modules/validation.js';
 // import inputMasks from './modules/masks.js';
 // import lazyload from './modules/lazyload.js';
@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log('close modal');
         },
     });
+
+    headerHideOnScroll();
 
     // // inits map:
     // if(!document.getElementById('yamapsId')) {
