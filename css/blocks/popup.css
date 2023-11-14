@@ -1,0 +1,49 @@
+.popup__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup__greetings {
+  display: inline-block;
+  max-width: 42rem;
+  margin-bottom: 2rem;
+  font: var(--font-T2);
+  text-align: center;
+}
+
+.popup__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 9rem;
+  height: 9rem;
+  margin-bottom: 2rem;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 769px) {
+  .popup__icon {
+    width: 12.6rem;
+    height: 12.6rem;
+  }
+}
+
+.popup__icon .icon {
+  width: 100%;
+  height: 100%;
+}
+
+.popup__button {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+  .popup__button {
+    min-width: 42rem;
+    max-width: 100%;
+  }
+}

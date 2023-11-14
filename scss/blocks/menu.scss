@@ -1,0 +1,9 @@
+.menu {
+    display: flex;
+    align-items: center;
+    column-gap: 4.1rem;
+
+    &__item {
+        flex-shrink: 0;
+    }
+}

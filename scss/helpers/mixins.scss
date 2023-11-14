@@ -110,9 +110,9 @@
   transition: opacity 0.3s, visibility 0s linear 0.3s;
 
   &.active {
-      opacity: 1;
-      visibility: inherit;
-      transition: opacity 0.3s, visibility 0.3s;
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.3s, visibility 0.3s;
   }
 }
 
@@ -153,16 +153,24 @@
 }
 
 @mixin breakpointMF($class) {
-  @if $class == large-desktop {
-      @media only screen and (min-width: 1401px) {
+  @if $class == extralarge-desktop {
+      @media only screen and (min-width: 1920px) {
+          @content;
+      }
+  } @else if $class == large-desktop {
+      @media only screen and (min-width: 1400px) {
           @content;
       }
   } @else if $class == desktop {
-      @media only screen and (min-width: 1201px) {
+      @media only screen and (min-width: 1200px) {
           @content;
       }
   } @else if $class == laptop {
       @media only screen and (min-width: 1025px) {
+          @content;
+      }
+  } @else if $class == portrait-tablet {
+      @media only screen and (min-width: 991px) {
           @content;
       }
   } @else if $class == tablet {
@@ -177,5 +185,17 @@
       @media only screen and (min-width: 577px) {
           @content;
       }
+  }
+}
+
+@mixin aspectRatio($class) {
+  @if $class == desktop {
+    @media only screen and (min-aspect-ratio: 16/9) {
+      @content;
+    }
+  } @else if $class == portrait {
+    @media only screen and (max-aspect-ratio: 3/3) {
+      @content;
+    }
   }
 }

@@ -1,0 +1,49 @@
+@import '../helpers/mixins.scss';
+
+.popup {
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__greetings {
+        display: inline-block;
+        max-width: 42rem;
+        margin-bottom: 2rem;
+        font: var(--font-T2);
+        text-align: center;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 9rem;
+        height: 9rem;
+        margin-bottom: 2rem;
+        background-color: var(--white);
+        border-radius: 50%;
+
+        @include breakpointMF(tablet) {
+            width: 12.6rem;
+            height: 12.6rem;
+        }
+
+        .icon {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__button {
+        min-width: 100%;
+        max-width: 100%;
+
+        @include breakpointMF(tablet) {
+            min-width: 42rem;
+            max-width: 100%;
+        }
+    }
+}

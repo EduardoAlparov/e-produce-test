@@ -1,0 +1,25 @@
+.link {
+    position: relative;
+    display: block;
+    font: var(--font-T3);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &::after {
+        position: absolute;
+        top: calc(100%);
+        left: 0;
+        width: 0;
+        height: 0.15rem;
+        min-height: 1px;
+        background-color: var(--text);
+        transition: width 0.3s ease-out;
+        content: "";
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+}

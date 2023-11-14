@@ -1,0 +1,163 @@
+@import '../helpers/mixins.scss';
+
+.hero-section {
+    height: 100vh;
+    padding-top: 7.7rem;
+    background-color: var(--back);
+
+    @include aspectRatio(portrait) {
+        padding-top: 7.7rem;
+    }
+
+    @include breakpointMF(tablet) {
+        padding-top: 13rem;
+    }
+
+    &__body {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        @include aspectRatio(portrait) {
+            align-items: center;
+        }
+
+        @include breakpointMF(tablet) {
+            align-items: flex-start;
+        }
+    }
+
+    &__heading {
+        position: relative;
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1.8rem;
+
+        @include breakpointMF(tablet) {
+            padding: 0 2rem;
+        }
+    }
+
+    &__title {
+        display: block;
+        width: min-content;
+        color: var(--white);
+        font: var(--font-H1);
+        font-size: clamp(28px, 5vw, 7rem);
+        line-height: 100%;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include aspectRatio(portrait) {
+            line-height: 110%;
+            width: 100%;
+            max-width: 90%;
+
+            br {
+                display: none;
+            }
+
+            @include breakpointMF(desktop) {
+                max-width: 70%;
+            }
+        }
+    }
+
+    &__button {
+        width: 100%;
+        margin-top: 1rem;
+
+        @include aspectRatio(portrait) {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        @include breakpointMF(tablet) {
+            margin-top: 2.7rem;
+            width: unset;
+        }
+    }
+
+    &__image-box {
+        position: absolute;
+        z-index: 1;
+        width: calc(min(50%, 72rem));
+        height: 100%;
+
+        @include breakpointMF(extralarge-desktop) {
+            width: calc(min(50%, 65rem));
+        }
+
+        &--left {
+            top: -5%;
+            left: 0%;
+            width: calc(min(61%, 75rem));
+            height: 105%;
+
+            @include breakpointMF(extralarge-desktop) {
+                width: calc(min(61%, 65rem));
+            }
+
+
+            @include aspectRatio(portrait) {
+                top: unset;
+                left: 50%;
+                bottom: 0;
+                width: 100%;
+                height: 36%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &--right {
+            right: 0;
+            width: calc(min(61%, 70rem));
+
+            @include breakpointMF(extralarge-desktop) {
+                width: calc(min(61%, 60rem));
+            }
+
+            @include aspectRatio(portrait) {
+                // display: none;
+                top: 0;
+                left: 50%;
+                bottom: unset;
+                right: unset;
+                width: calc(min(100%, 40rem));
+                height: 40%;
+                transform: translateX(-50%);
+            }
+        }
+
+    }
+
+    &__picture-composition {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            object-position: top right;
+
+
+            @include aspectRatio(portrait) {
+                @include centeredAbsolute();
+
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.mobile-menu {
+    height: 100%;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        height: 100%;
+    }
+
+    &__decore {
+        position: relative;
+        flex-grow: 1;
+
+        img {
+            position: absolute;
+            top: 1rem;
+            right: -2rem;
+            z-index: 1;
+
+            display: block;
+            width: 50%;
+            max-height: 100%;
+
+            object-fit: cover;
+            object-position: top left;
+        }
+    }
+
+    &__list {
+        margin-bottom: 4rem;
+
+        &.menu {
+            flex-direction: column;
+            align-items: flex-start;
+            column-gap: unset;
+
+            .menu__item {
+                margin-bottom: 4rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

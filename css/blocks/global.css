@@ -1,20 +1,19 @@
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
-  font-size: 9px;
   -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  font-size: 10px;
+  transition: font-size 0.2s ease-out;
 }
-@media only screen and (min-width: 577px) {
+
+@media only screen and (max-width: 370px) {
   html {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
+
 @media only screen and (min-width: 769px) {
   html {
-    font-size: 10px;
-    font-size: clamp(9px, 0.52vw, 25px);
-    font-size: clamp(9px, 0.6vw, 25px);
-    font-size: clamp(9px, 0.6vw, 25px);
+    font-size: clamp(10px, 0.6vw, 25px);
   }
 }

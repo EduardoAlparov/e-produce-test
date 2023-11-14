@@ -1,0 +1,99 @@
+@import '../helpers/mixins.scss';
+
+.card {
+    display: block;
+    width: 100%;
+
+    &__body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: var(--accent-yellow);
+        border-radius: 1.3rem;
+        padding: 3.4rem 0.7rem 0.3rem 1.5rem;
+
+        @include breakpointMF(desktop) {
+            border-radius: 2.3rem;
+            padding: 6rem 2.7rem 0.8rem;
+        }
+    }
+
+    &__sim {
+        position: absolute;
+        top: 1.2rem;
+        left: 1.2rem;
+        z-index: 1;
+        width: 2.8rem;
+        height: 1.7rem;
+
+        @include breakpointMF(desktop) {
+            top: 2rem;
+            left: 2.5rem;
+
+            width: 4.8rem;
+            height: 3.7rem;
+        }
+    }
+
+    &__signal {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1;
+        width: 1.5rem;
+        height: 1rem;
+
+        @include breakpointMF(desktop) {
+            top: 2.3rem;
+            right: 1.8rem;
+            width: 2.8rem;
+            height: 3.5rem;
+        }
+    }
+
+    &__label {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 2rem;
+        padding: 0.24rem 0.3rem;
+        background-color: var(--white);
+        border-radius: 5rem;
+
+        @include breakpointMF(desktop) {
+            margin-right: 1.5rem;
+            padding: 0.6rem 1rem;
+            border-radius: 9rem;
+        }
+
+        span {
+            color: var(--text);
+            font: var(--font-C2);
+            // font-size: clamp(8px, 2.5vw, 1rem);
+            text-align: center;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            @include breakpointMF(desktop) {
+                // font-size: clamp(8px, 1.5vw, 1.7rem);
+            }
+        }
+    }
+
+    &__title {
+        margin-right: 1rem;
+        font: var(--font-C1);
+        // font-size: clamp(35px, 9.7vw, 2.4rem);
+        letter-spacing: -3px;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+
+        @include breakpointMF(desktop) {
+            margin-right: 0;
+            // font-size: clamp(24px, 5vw, 6rem);
+        }
+    }
+}

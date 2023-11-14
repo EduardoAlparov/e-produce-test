@@ -1,12 +1,41 @@
 .header {
-    flex: 0 0 max-content;
-    padding: 1.2rem 0;
-
-    background-color: var(--back);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: 0;
+    z-index: 150;
+    padding: 2rem 0;
+    background-color: transparent;
 }
 
 .header__site-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    column-gap: 4.1rem;
+}
+
+.header__menu {
+    margin-left: auto;
+}
+
+.header__menu.menu,
+.header__button.button {
+    display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+    .header {
+        padding: 3rem 0;
+    }
+
+    .header__menu.menu,
+    .header__button.button {
+        display: flex;
+    }
+
+    .header__mobile-btn {
+        display: none;
+    }
 }

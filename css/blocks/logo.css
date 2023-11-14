@@ -1,0 +1,16 @@
+.logo {
+  display: block;
+  width: 10rem;
+  height: 2.4rem;
+}
+
+@media only screen and (min-width: 769px) {
+  .logo {
+    width: 13.65rem;
+    height: 3.25rem;
+  }
+}
+
+.logo .icon {
+  fill: var(--white);
+}

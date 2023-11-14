@@ -1,29 +1,57 @@
 @import '../helpers/mixins.scss';
 
 .button {
-  display: block;
-  padding: 2rem 4rem;
-  
-  color: var(--white);
-  background-color: var(--accent);
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
-  border-radius: 0.4rem;
-
+  display: flex;
+  justify-content: center;
+  padding: 1.4rem 2rem;
+  color: var(--text);
+  font: var(--font-T3);
+  font-weight: 700;
+  line-height: 1.12;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: var(--white);
+  border-radius: 1.4rem;
   transition: var(--transition);
+  cursor: pointer;
 
-  &__text {
-    display: inline-block;
-  }
 
   @include breakpointMF(tablet) {
-    display: block;
+    padding: 1.4rem 2rem;
   }
 
-  @include hover {
-    color: var(--title);
-    background-color: var(--white);
-    border-color: var(--title);
+  &--dark {
+    background-color: var(--accent-blue);
+    color: var(--white);
+
+    &:hover {
+      background-color: rgba($color: #3c4497, $alpha: 0.9);
+    }
+  }
+
+  &--white {
+    &:hover {
+      background-color: var(--accent-blue);
+      color: var(--white);
+    }
+  }
+
+  &--big {
+    padding: 1.6rem 4rem;
+    font: var(--font-T1);
+    font-weight: 700;
+    line-height: 1;
+
+    @include breakpointMF(tablet) {
+      padding: 2.5rem 4rem;
+    }
+  }
+
+  &--middle {
+    padding: 1.8rem 4rem;
+    font: var(--font-T2);
+    font-weight: 700;
+    line-height: 1;
   }
 }

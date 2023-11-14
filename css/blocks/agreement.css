@@ -1,0 +1,15 @@
+.agreement {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.agreement__text span,
+.agreement__text a {
+  display: inline;
+  font: var(--font-body);
+}
+
+.agreement__text a {
+  color: var(--accent-blue);
+  text-decoration-line: underline;
+}

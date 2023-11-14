@@ -11,7 +11,7 @@ body {
 }
 
 /* Убираем внутренние отступы */
-ul[class],
+ul,
 ol[class] {
   padding: 0;
 }
@@ -23,7 +23,7 @@ h2,
 h3,
 h4,
 p,
-ul[class],
+ul,
 ol[class],
 li,
 figure,
@@ -126,7 +126,7 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 svg {
@@ -135,10 +135,10 @@ svg {
   height: 100%;
 }
 
-input, textarea { 
+input, textarea {
   color: inherit;
   background-color: transparent;
   border: none;
-  outline: 1px solid grey; 
+  outline: 0 solid transparent;
   resize: none;
 }

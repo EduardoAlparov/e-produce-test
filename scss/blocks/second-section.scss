@@ -1,0 +1,64 @@
+@import '../helpers/mixins.scss';
+
+.second-section {
+    padding: 5rem 0 2rem;
+
+    @include breakpointMF(small-tablet) {
+        padding: 10rem 0 4rem;
+    }
+
+    &__site-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    &__subtitle,
+    &__title {
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+        font: var(--font-H2);
+        text-transform: uppercase;
+
+        @include breakpointMF(small-tablet) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 1rem;
+        font: var(--font-H3);
+
+        @include breakpointMF(small-tablet) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        margin: 0 auto;
+
+        @include breakpointMF(tablet) {
+            max-width: 36rem;
+        }
+    }
+
+    &__item {
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(small-tablet) {
+            margin-bottom: 4rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

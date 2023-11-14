@@ -1,0 +1,118 @@
+@import '../helpers/mixins.scss';
+
+.prizes {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 3.5rem;
+
+    @include breakpointMF(tablet) {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 2rem;
+        padding-top: 10.5rem;
+    }
+
+    @include breakpointMF(desktop) {
+        column-gap: 4rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        flex: 0 0 auto;
+        aspect-ratio: 3.04 / 1;
+        min-height: 11rem;
+        margin-bottom: 10%;
+        border-radius: 2rem;
+        background-color: var(--accent-yellow);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(tablet) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            aspect-ratio: unset;
+            width: calc(100% / 3 - 1.34rem);
+            min-height: 24rem;
+            margin-bottom: 0;
+            border-radius: 3.6rem;
+        }
+
+        @include breakpointMF(portrait-tablet) {
+            min-height: 30rem;
+        }
+
+        @include breakpointMF(desktop) {
+            width: calc(100% / 3 - 2.67rem);
+        }
+    }
+
+    &__image {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex: 0 1 50%;
+
+        @include breakpointMF(tablet) {
+            flex: 1 1 100%;
+            height: unset;
+        }
+    }
+
+    &__picture-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transform: translate(-50%, -70%);
+
+        @include breakpointMF(tablet) {
+            top: unset;
+            bottom: 0;
+            transform: translateX(-50%);
+            aspect-ratio: 1;
+        }
+    }
+
+    &__picture {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+
+        @include breakpointMF(tablet) {
+            aspect-ratio: 1;
+            width: 75%;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__text {
+        flex: 0 0 50%;
+        display: flex;
+        margin-left: -0.5rem;
+        align-items: center;
+        font: var(--font-T2);
+
+        @include breakpointMF(tablet) {
+            flex: 0 0 auto;
+            display: block;
+            margin-bottom: 4.7rem;
+            margin-left: unset;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import '../helpers/mixins.scss';
+
+.input-wrapper {
+    width: 100%;
+
+    &__label {
+        display: block;
+        margin-bottom: 1rem;
+        font: var(--font-T3);
+        font-weight: 700;
+        line-height: 142.857%;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 1.65rem 2rem;
+        font: var(--font-body);
+        font-size: 1.8rem;
+        border-radius: 0.8rem;
+        background-color: var(--white);
+        outline: none;
+        border: 2px solid transparent;
+
+        @include breakpointMF(tablet) {
+            font: var(--font-T3);
+            font-size: 1.8rem;
+            border-radius: 1.4rem;
+        }
+
+        @include placeholder {
+            color: var(--grey-dark);
+            font: var(--font-T1);
+            font-size: 1.8rem;
+            opacity: 0.5;
+
+            @include breakpointMF(tablet) {
+                font: var(--font-T3);
+            }
+        }
+    }
+
+    &__error {
+        display: block;
+        margin-top: 0.5rem;
+        font: var(--font-E1);
+        color: var(--error);
+        display: none;
+    }
+}

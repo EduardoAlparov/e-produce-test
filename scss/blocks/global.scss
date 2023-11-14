@@ -1,22 +1,22 @@
 @import '../helpers/mixins.scss';
 
 html {
+  @include noHighlight();
   box-sizing: border-box;
-
   -webkit-text-size-adjust: 100%;
 
-  font-size: 9px;
-  
-  @include breakpointMF(mobile) {
-    font-size: 10px;
-  }
-  
-  @include breakpointMF(tablet) {
-    font-size: 10px;
-    font-size: clamp(9px, 0.52vw, 25px);
-    font-size: clamp(9px, 0.6vw, 25px);
-    font-size: clamp(9px, 0.6vw, 25px);
+  font-size: 10px;
+  transition: font-size 0.2s ease-out;
+
+  @include breakpoint(supersmall-mobile) {
+    font-size: 9px;
   }
 
-  @include noHighlight();
+  @include breakpointMF(tablet) {
+    font-size: clamp(10px, 0.6vw, 25px);
+  }
+
+  // @include breakpointMF(extralarge-desktop) {
+  //   font-size: clamp(15px, 0.7vw, 25px);
+  // }
 }

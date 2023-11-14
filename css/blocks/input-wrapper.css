@@ -1,0 +1,90 @@
+.input-wrapper {
+  width: 100%;
+}
+
+.input-wrapper__label {
+  display: block;
+  margin-bottom: 1rem;
+  font: var(--font-T3);
+  font-weight: 700;
+  line-height: 142.857%;
+}
+
+.input-wrapper__input {
+  width: 100%;
+  padding: 1.65rem 2rem;
+  font: var(--font-body);
+  font-size: 1.8rem;
+  border-radius: 0.8rem;
+  background-color: var(--white);
+  outline: none;
+  border: 2px solid transparent;
+}
+
+@media only screen and (min-width: 769px) {
+  .input-wrapper__input {
+    font: var(--font-T3);
+    font-size: 1.8rem;
+    border-radius: 1.4rem;
+  }
+}
+
+.input-wrapper__input::-webkit-input-placeholder {
+  color: var(--grey-dark);
+  font: var(--font-T1);
+  font-size: 1.8rem;
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 769px) {
+  .input-wrapper__input::-webkit-input-placeholder {
+    font: var(--font-T3);
+  }
+}
+
+.input-wrapper__input:-moz-placeholder {
+  color: var(--grey-dark);
+  font: var(--font-T1);
+  font-size: 1.8rem;
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 769px) {
+  .input-wrapper__input:-moz-placeholder {
+    font: var(--font-T3);
+  }
+}
+
+.input-wrapper__input::-moz-placeholder {
+  color: var(--grey-dark);
+  font: var(--font-T1);
+  font-size: 1.8rem;
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 769px) {
+  .input-wrapper__input::-moz-placeholder {
+    font: var(--font-T3);
+  }
+}
+
+.input-wrapper__input:-ms-input-placeholder {
+  color: var(--grey-dark);
+  font: var(--font-T1);
+  font-size: 1.8rem;
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 769px) {
+  .input-wrapper__input:-ms-input-placeholder {
+    font: var(--font-T3);
+  }
+}
+
+.input-wrapper__error {
+  display: block;
+  margin-top: 0.5rem;
+  font: var(--font-E1);
+  color: var(--error);
+  display: none;
+}

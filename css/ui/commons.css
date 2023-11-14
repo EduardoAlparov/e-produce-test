@@ -18,25 +18,25 @@
     transition: none !important;
 }
 
-input::placeholder { 
-    color: #666; 
+input::placeholder {
+    color: #666;
     font-size: 80%;
 }
 
-::selection { 
-    background-color: var(--accent); 
-    color: #fff; 
+::selection {
+    background-color: var(--accent);
+    color: #fff;
 }
 
 /* input validation behavior */
-input:focus:required:invalid, 
-textarea:focus:required:invalid { 
-    border-color: red; 
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+    border-color: var(--error);
 }
 
-input:required:valid, 
-textarea:required:valid { 
-    border-color: green; 
+input:required:valid,
+textarea:required:valid {
+    border-color: var(--success);
 }
 
 .disable-scroll {
